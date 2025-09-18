@@ -18,6 +18,7 @@ distro==1.5.0
 Django==4.2.24
 django-cors-headers==4.8.0
 djangorestframework==3.16.1
+djangorestframework_simplejwt==5.5.1
 file-magic==0.4.0
 filelock==3.7.1
 # gpg==1.15.1  # Version not on PyPI; if truly needed on Linux, pin gpg==1.10.0 and ensure libgpgme is installed
@@ -41,10 +42,18 @@ parsedatetime==2.6
 platformdirs==2.5.4
 ply==3.11
 prettytable==0.7.2
+psycopg==3.2.10
+psycopg-binary==3.2.10
 ptyprocess==0.6.0
 pycparser==2.20
+<<<<<<< HEAD
 # PyGObject==3.40.1  # Linux/GTK bindings
 # pyinotify==0.9.6  # Linux inotify only
+=======
+PyGObject==3.40.1
+pyinotify==0.9.6
+PyJWT==2.10.1
+>>>>>>> 190d903e2261d06de6f498eb8361cea25dcf6be9
 pyOpenSSL==21.0.0
 pyparsing==2.4.7
 pyRFC3339==1.1
@@ -52,7 +61,12 @@ pyrsistent==0.17.3
 pyserial==3.4
 PySocks==1.7.1
 python-dateutil==2.8.1
+<<<<<<< HEAD
 # python-linux-procfs==0.7.3  # Linux /proc only
+=======
+python-dotenv==1.1.1
+python-linux-procfs==0.7.3
+>>>>>>> 190d903e2261d06de6f498eb8361cea25dcf6be9
 pytz==2021.1
 # pyudev==0.22.0  # Linux udev only
 PyYAML==6.0.2  # Updated to avoid building from source on Windows/Python 3.13
