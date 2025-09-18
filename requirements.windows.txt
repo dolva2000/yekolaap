@@ -1,0 +1,24 @@
+# Windows-friendly app dependencies for the Django project
+# Usage:
+#   pip install -r requirements.windows.txt
+
+Django==4.2.24
+asgiref==3.9.1
+sqlparse==0.5.3
+djangorestframework==3.16.1
+django-cors-headers==4.8.0
+
+# Common HTTP and parsing
+requests==2.25.1
+urllib3==1.26.5
+idna==2.10
+chardet==4.0.0
+PyYAML==6.0.2
+packaging==25.0
+
+# Templates (updated for Python 3.13 compatibility)
+Jinja2==3.1.4
+MarkupSafe==2.1.5
+
+# Typing/backports
+typing_extensions==4.15.0

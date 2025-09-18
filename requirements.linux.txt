@@ -1,0 +1,68 @@
+# Linux/server dependencies for the Django project
+# Usage (Ubuntu/Debian example):
+#   sudo apt-get update && sudo apt-get install -y \
+#     cloud-init gpg libgpgme-dev dbus libdbus-1-dev \
+#     libsystemd-dev policycoreutils selinux-utils setools \
+#     libudev-dev gir1.2-gtk-3.0 build-essential pkg-config \
+#     python3-gi libglib2.0-dev
+#   # On RHEL/CentOS/Fedora use `dnf` and equivalent package names
+#
+# Then install Python packages:
+#   pip install -r requirements.linux.txt
+
+# Core app deps
+Django==4.2.24
+asgiref==3.9.1
+sqlparse==0.5.3
+djangorestframework==3.16.1
+django-cors-headers==4.8.0
+
+# Common HTTP and parsing
+requests==2.25.1
+urllib3==1.26.5
+idna==2.10
+chardet==4.0.0
+PyYAML==5.4.1
+packaging==25.0
+
+# Templates (Py3.13-compatible)
+Jinja2==3.1.4
+MarkupSafe==2.1.5
+
+# ACME/Certbot (optional server usage)
+acme==3.1.0
+certbot==3.1.0
+certbot-nginx==3.1.0
+
+# Linux/system-related Python packages (require OS dev headers)
+# dbus
+# Requires: dbus, libdbus-1-dev, pkg-config
+ dasbus==1.4
+ dbus-python==1.2.18
+
+# GPG
+# Requires: gpg, libgpgme-dev
+ gpg==1.10.0
+
+# comps/rpm metadata (libcomps)
+# May require: libxml2-dev, libxslt-dev, etc.
+ libcomps==0.1.23.post1
+
+# Net & process
+ netifaces==0.10.6
+ python-linux-procfs==0.7.3
+ pyudev==0.22.0
+ pyinotify==0.9.6
+ pexpect==4.8.0
+ PyGObject==3.40.1
+
+# NOTE: The following are typically provided by the OS and not installable via PyPI:
+# - cloud-init (apt/dnf install cloud-init)
+# - nftables tools and Python bindings
+# - rpm Python bindings on non-RPM distros
+# - selinux, sepolicy, setools, systemd-python
+# - perf tools
+# Install those via your distribution package manager if needed.
+
+# Misc utilities
+typing_extensions==4.15.0
