@@ -14,8 +14,9 @@ import os
 from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(BASE_DIR / ".env.local", override=True) 
 load_dotenv(BASE_DIR / ".env")
+load_dotenv(BASE_DIR / ".env.local", override=True) 
+
 
 
 
@@ -103,6 +104,7 @@ WSGI_APPLICATION = 'yekolaap.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 USE_SQLITE = os.getenv("USE_SQLITE", "1") == "1"
+
 
 DATABASES = {
     "default": {
