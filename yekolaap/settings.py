@@ -14,6 +14,7 @@ import os
 from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(BASE_DIR / ".env.local", override=True) 
 load_dotenv(BASE_DIR / ".env")
 
 
@@ -36,10 +37,9 @@ CORS_ALLOWED_ORIGINS = [
     "http://yekolaapp.duckdns.org",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://yekolaapp.duckdns.org",
-    "http://yekolaapp.duckdns.org",
+    "http://localhost:8000", "http://127.0.0.1:8000",
+    "http://yekolaapp.duckdns.org", "https://yekolaapp.duckdns.org",
 ]
-
 # Application definition
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "accounts",
     "posts",
+    "learning",
 ]
 
 MIDDLEWARE = [
