@@ -1,4 +1,6 @@
 Django==4.2.24
+gTTS==2.5.3
+openai-whisper==20231117  # (optionnel si tu veux l’ASR local)
 djangorestframework
 djangorestframework-simplejwt
 django-cors-headers

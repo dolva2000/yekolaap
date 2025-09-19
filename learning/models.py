@@ -109,3 +109,20 @@ class Attempt(models.Model):
     is_correct = models.BooleanField()
     time_ms = models.IntegerField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+
+class MediaAsset(models.Model):
+    KIND_CHOICES = (("tts", "TTS"), ("recording", "UserRecording"))
+    kind = models.CharField(max_length=16, choices=KIND_CHOICES)
+    lang_code = models.CharField(max_length=10, default="ln")  # ex: 'ln'
+    text_hash = models.CharField(max_length=64, db_index=True, blank=True)
+    text = models.TextField(blank=True)
+    file = models.FileField(upload_to="audio/")
+    duration_ms = models.IntegerField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    # Optionnel: lien vers un Item pour rattacher un TTS à un contenu
+    item = models.ForeignKey("Item", null=True, blank=True, on_delete=models.SET_NULL)
+
+    def __str__(self):
+        return f"{self.kind}:{self.lang_code}:{self.text_hash or self.file.name}"

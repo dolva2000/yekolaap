@@ -43,10 +43,16 @@ certbot-nginx==3.1.0
 # GPG
 # Requires: gpg, libgpgme-dev
  gpg==1.10.0
+  # (optionnel si tu veux l’ASR local)
 
 # comps/rpm metadata (libcomps)
 # May require: libxml2-dev, libxslt-dev, etc.
  libcomps==0.1.23.post1
+ gTTS==2.5.3
+ openai-whisper==20231117
+
+  # (optionnel si tu veux l’ASR local)
+
 
 # Net & process
  netifaces==0.10.6

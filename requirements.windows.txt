@@ -7,6 +7,8 @@ asgiref==3.9.1
 sqlparse==0.5.3
 djangorestframework==3.16.1
 django-cors-headers==4.8.0
+gTTS==2.5.3
+openai-whisper==20231117
 
 # Common HTTP and parsing
 requests==2.25.1
